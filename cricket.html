@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cricket Live Score Overlay</title>
+
+<style>
+
+body{
+margin:0;
+background:transparent;
+font-family:Arial;
+}
+
+#scoreboard{
+position:absolute;
+bottom:30px;
+left:30px;
+background:rgba(0,0,0,0.85);
+color:white;
+padding:15px 30px;
+border-radius:10px;
+display:flex;
+gap:25px;
+font-size:28px;
+}
+
+.team{
+font-weight:bold;
+}
+
+#score{
+color:#00ff90;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="scoreboard">
+
+<div class="team" id="team">IND</div>
+
+<div id="score">45/2</div>
+
+<div id="overs">(6.3)</div>
+
+</div>
+
+<script>
+
+let team="IND"
+let score="45/2"
+let overs="6.3"
+
+function updateScore(){
+
+document.getElementById("team").innerText=team
+document.getElementById("score").innerText=score
+document.getElementById("overs").innerText="("+overs+")"
+
+}
+
+updateScore()
+
+</script>
+
+</body>
+</html>
